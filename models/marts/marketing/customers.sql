@@ -31,7 +31,7 @@ final AS (
         customers.last_name,
         customer_orders.first_order_date,
         customer_orders.most_recent_order_date,
-        coalesce(customer_orders.number_of_orders, 0) AS number_of_orders
+        COALESCE(customer_orders.number_of_orders, 0) AS number_of_orders
     FROM
         customers
     LEFT JOIN
