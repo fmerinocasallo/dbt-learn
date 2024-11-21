@@ -9,9 +9,7 @@ orders AS (
     SELECT
         *
     FROM
-        {{ ref('stg_jaffle_shop__orders') }} AS stg_jaffle_shop__orders
-    INNER JOIN
-        {{ ref('fct_orders') }} USING (order_id, customer_id)
+        {{ ref('fct_orders') }}
 ),
 
 customer_orders AS (
