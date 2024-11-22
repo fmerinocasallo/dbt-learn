@@ -6,7 +6,9 @@ sources:
     schema: jaffle_shop
     tables:
       - name: customers
-        description: One record per customer
+        description: >
+          Raw customer data.
+          One record per customer.
         columns:
           - name: id
             description: Primary key for customers.
@@ -17,6 +19,9 @@ sources:
             description: NULL when a customer has not yet placed an order.
             
       - name: orders
+        description: >
+          Raw order data.
+          One record per order.
         columns:
           - name: id
             description: Primary key for orders.
